@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <label> NAME: </label><input type="text" name='name' id='id_username' value={{i.name}} required><br>
+        <label> Age: </label><input type="number" name='age' id='id_age' value={{i.age}} required><br>
+        <label> Male: </label><input type="radio" name='gender' id='id_gender' value='Male' >
+        <label> Female: </label> <input type="radio" name='gender' id='id_gender' value='Female'><br>
+        <label> Email: </label><input type="email" name='email' id='id_email' value={{i.email}}><br>
+        <label> Address: </label><input type="text" name='address' id='id_address' value={{i.address}} required><br>
+        <label> Phone: </label><input type="number" name='phone' id='id_phone' value={{i.phone}}><br>
+        <label> SSC %: </label><input type="number" name='ssc' id='id_ssc' value={{i.ssc}}><br>
+        <label> PUC %: </label><input type="number" name='puc' id='id_puc' value={{i.puc}}><br>
+        <label> Btech %: </label><input type="number" name='btech' id='id_btech' value={{i.btech}}><br>
+        <label> Course: </label><input type="text" name='course' id='id_course' value={{i.course}}><br>
+        <label> YoP %: </label><input type="number" name='yop' id='id_yop' value={{i.yop}}><br>
+        <label> Mock %: </label><input type="number" name='mock' id='id_mock' value={{i.mock}}><br>
+        <input type="submit" value="update">
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>details</title>
+</head>
+<body>
+    <table border="2">
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>age</td>
+            <td>gender</td>
+            <td>email</td>
+            <td>phone</td>
+            <td>address</td>
+            <td>ssc</td>
+            <td>puc</td>
+            <td>btech</td>
+            <td>course</td>
+            <td>yop</td>
+            <td>mock</td>
+        </tr>
+        {% for i in res %}
+        <tr>
+            <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.age}}</td>
+                <td>{{i.gender}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.phone}}</td>
+                <td>{{i.address}}</td>
+                <td>{{i.ssc}}</td>
+                <td>{{i.puc}}</td>
+                <td>{{i.btech}}</td>
+                <td>{{i.course}}</td>
+                <td>{{i.yop}}</td>
+                <td>{{i.mock}}</td>
+                <td><a href="{% url 'update' data=i.id %}"><button>update</button></a></td>
+                <td><a href="{% url 'delete' data=i.id %}"><button>delete</button></a></td>
+            </tr>
+        {% endfor %}
+        </table>
+
+
+        
+</body>
+</html>
